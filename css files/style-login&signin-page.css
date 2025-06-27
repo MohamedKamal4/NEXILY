@@ -1,0 +1,134 @@
+.content-signin {
+    background-color: rgba(0, 0, 0, 0.26);
+    backdrop-filter: blur(10px);
+}
+
+.content-login {
+    background-color: rgba(255, 255, 255, 0.534);
+    backdrop-filter: blur(10px);
+    border: unset;
+}
+
+.color {
+    background-color: transparent;
+}
+
+
+.input-group {
+    position: relative;
+}
+
+.show-pass {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgb(255, 166, 0);
+}
+
+
+
+
+#box {
+    transition: background 0.8s ease;
+}
+
+.content {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.login {
+    position: absolute;
+    bottom: -100%;
+    right: auto;
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+}
+
+.signup {
+    position: absolute;
+    top: -100%;
+    right: auto;
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+}
+
+
+
+
+.animate-login {
+    bottom: 10%;
+    right: auto;
+    transition: all 0.8s ease-in-out;
+    position: absolute;
+    opacity: 1;
+}
+
+
+
+.animate-signin {
+    position: absolute;
+    top: 2.5%;
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
+    right: auto;
+}
+
+
+#box {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 0;
+    opacity: 0;
+}
+
+.bg-left {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/pexels-lucadross-9402404.jpg');
+}
+
+.bg-right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/pexels-timmossholder-1666728.jpg')
+}
+
+.bg.active {
+    opacity: 1;
+}
+
+
+
+.custom-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2d3748;
+    /* tailwind: bg-gray-800 */
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.custom-upload:hover {
+    background-color: #4a5568;
+}
+
+#file-upload {
+    display: none;
+}
+
+#file-name {
+    color: #ccc;
+    font-size: 14px;
+}

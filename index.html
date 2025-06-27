@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N E X I L Y</title>
+    <link rel="shortcut icon" href="./assets/images/letter-n.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css files/style-login&signin-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body style="font-family: 'Comfortaa', sans-serif;">
+
+    <div id="box"
+        class="box m-auto w-full h-screen  flex justify-center items-center px-[20px] sm:px-[50px] md:px-[60px]">
+        <div class="bg bg-left"></div>
+        <div class="bg bg-right"></div>
+        <div id="login" class="content w-full h-[80%] flex justify-center items-center">
+            <div id="login-form"
+                class="content-login w-[100%] sm:w-[60%] md:w-[50%] lg:w-[40%] h-[80%] flex flex-col justify-between items-center bg-white rounded-lg shadow-lg pt-5">
+                <div class="welcome w-full h-[20%] flex justify-center flex-col items-center">
+                    <h1 class="text-2xl font-semibold tracking-[10px] text-center">N E X I L Y</h1>
+                </div>
+                <div class="head h-[20%] flex justify-center items-center flex-col">
+                    <h1 class="text-gray-900 text-md font-semibold tracking-[5px]">
+                        Welcome Back</h1>
+                    <div id="succss-message" style="display:none; color: green; margin-top: 10px; font-size: 12px;">
+                    </div>
+                    <div id="error-message" style="display:none; color: red; margin-top: 10px; font-size: 12px;"></div>
+                </div>
+                <form class="w-full h-[75%] gap-5 rounded-lg p-6 flex flex-col justify-center">
+
+                    <input type="text" id="username"
+                        class="h-[20%] border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required placeholder="User Name" style="background-color: white; color: black;">
+
+
+                    <div class="h-[20%] input-group flex justify-between items-center">
+                        <input type="password" id="password"
+                            class="password border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required placeholder="Password" min="6" maxlength="20"
+                            style="background-color: white; color: black;">
+                        <button type="button" id="show-pass-one" class="show-pass"><i
+                                class="fa-solid fa-eye"></i></button>
+                    </div>
+
+                    <div class="flex items-center h-[20%]">
+                        <input id="default-checkbox" type="checkbox" value="" style="color: black;"
+                            class="w-4 h-4  bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox"
+                            class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                    </div>
+
+                    <div class="flex justify-center items-center w-full h-[20%]">
+                        <button type="button" id="login-btn"
+                            class="w-full text-white cursor-pointer hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 tracking-[5px]"
+                            style="background-color: black;">Log
+                            In
+                        </button>
+                    </div>
+
+
+                    <div class="bottom w-full h-[20%] flex justify-between items-center">
+                        <a href="#" class="text-sm text-gray-900 hover:underline">Forgot Password?</a>
+                        <button type="button" id="show-btn-two"
+                            class="text-dark bg-transparent hover:text-amber-500 focus:outline-none text-sm rounded-lg text-sm tracking-[5px] cursor-pointer">Sign
+                            Up</button>
+                    </div>
+
+                </form>
+            </div>
+
+
+
+            <div id="signup-form"
+                class="content-signin w-[100%] sm:w-[60%] md:w-[50%] lg:w-[40%] h-[95%] flex-col justify-between items-center  rounded-lg shadow-lg">
+
+
+                <div class="welcome w-full h-[30%] flex justify-center gap-4 flex-col items-center">
+                    <span id="welcome-text"
+                        class="text-gray-400 text-md font-semibold tracking-[5px] text-center">Welcome To</span>
+                    <h1 class="text-2xl text-white font-semibold tracking-[10px] text-center">N E X I L Y</h1>
+                    <div id="error-message-two" style="display:none; color: red; padding: 5px; font-size: 12px;"></div>
+                    <div role="status" id="status-message-two" class="flex justify-center items-center "></div>
+                </div>
+
+
+                <form id="hidden" class=" w-full h-[60%] rounded-lg p-6 flex flex-col justify-between ">
+
+                    <div class="name flex justify-between items-center gap-3">
+                        <input type="text" id="full-name"
+                            class="w-[50%] color border border-gray-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required placeholder="Full Name">
+                        <input type="text" id="user-name"
+                            class="w-[50%] color border border-gray-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required placeholder="User Name">
+                    </div>
+
+
+                    <input type="text" id="email"
+                        class="color border border-gray-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required placeholder="E-Mail">
+
+
+                    <div class="flex justify-between items-center gap-3">
+                        <div class="input-group flex justify-between items-center w-[50%]">
+                            <input type="password" id="password-two"
+                                class="password color w-full border border-gray-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required placeholder="Password">
+                            <button type="button" id="show-pass-two" class="show-pass"><i
+                                    class="fa-solid fa-eye"></i></button>
+                        </div>
+                        <div class="input-group w-[50%] flex justify-between items-center">
+                            <input type="password" id="password-Three"
+                                class="password color w-full border border-gray-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required placeholder="Confirm Password">
+                            <button type="button" id="show-pass-Three" class="show-pass"><i
+                                    class="fa-solid fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="pic h-[15%] flex justify-between items-center rounded-lg">
+                        <input type="file" id="file-upload" class="hidden" />
+                        <label for="file-upload"
+                            class="w-[50%] h-[100%] flex justify-center items-center color text-sm text-white text-center py-2 px-1 rounded cursor-pointer hover:bg-gray-700 transition">Choose
+                            Profile Image</label>
+                        <p id="file-name"
+                            class="w-[50%] text-sm text-gray-400 flex justify-center items-center h-[100%]"
+                            style="overflow: hidden;">No file chosen</p>
+                    </div>
+
+                    <button type="button" id="signup-btn" style="background-color: white; color: black;"
+                        class="cursor-pointer  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 tracking-[5px]">Sign
+                        In</button>
+                </form>
+                <div class="bottom w-full  h-[10%] flex justify-between items-center">
+                    <button type="button" id="show-btn"
+                        class="w-full flex justify-center items-center text-white bg-transparent hover:text-amber-500 focus:outline-none text-sm rounded-lg pb-4 pt-2 text-sm tracking-[5px] cursor-pointer">Log
+                        In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./js fils/script-login&signin-page.js"></script>
+</body>
+
+</html>

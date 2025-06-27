@@ -1,0 +1,4 @@
+.clicked {
+    color: red !important;
+    transition: color 0.3s ease-in-out;
+}
